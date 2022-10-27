@@ -1,0 +1,276 @@
+:root {
+  --background-color: beige;
+  --primary-color: #51604d;
+  --highlight-color: #f1dc4c;
+}
+
+* {
+  font-size: 16px;
+}
+body {
+  background-color: var(--background-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 2;
+  padding: 0;
+  margin: 0;
+}
+
+:-moz-selection {
+  background-color: var(--highlight-color);
+}
+::selection {
+  background-color: var(--highlight-color);
+}
+
+/* a {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--highlight-color);
+} */
+
+header {
+  background: url(img/BannerLogo.png) no-repeat;
+  background-color: #426023;
+  background-size: cover;
+  height: 5.5em;
+  font-family: Georgia, serif;
+  font-size: 2.18em;
+  text-align: center;
+  color: rgb(67, 109, 35);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 5px;
+  padding-bottom: 0px;
+  padding-left: 5px;
+}
+
+.container {
+  width: 1920px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5em;
+  text-align: center;
+  color: goldenrod;
+}
+
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2em;
+  color: #51604d;
+  text-align: left;
+}
+
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5em;
+  text-align: center;
+  color: #426023;
+}
+
+.nav-bar {
+  background-color: #51604d;
+  padding: 10px;
+  display: block;
+  color: #f1dc4c;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-family: Georgia;
+  width: 300%;
+}
+.menu,
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu {
+  background-color: #51604d;
+  width: 100%;
+  margin-left: -100%;
+  transition: all 0.5s;
+}
+.menu__link {
+  display: block;
+  padding: 15px;
+  color: #f1dc4c;
+  font-size: 1.1em;
+  font-family: Georgia;
+  -webkit-text-stroke: 0.3px black;
+  text-decoration: none;
+}
+.menu__link:hover {
+  background-color: #6a6b39;
+  color: aliceblue;
+}
+.submenu .menu__link:hover {
+  background-color: rgb(158, 157, 36);
+}
+.submenu {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.submenu .menu__link {
+  background-color: #6a6b39;
+  font-size: 1.15em;
+  font-family: Georgia;
+  color: #ffebeb;
+  padding-left: 20px;
+}
+.mostrar {
+  margin-left: 0;
+}
+@media (min-width: 1024px) {
+  .nav-bar {
+    display: none;
+  }
+  .menu {
+    margin-left: 0;
+    display: flex;
+  }
+  .container-submenu {
+    position: relative;
+  }
+  .submenu {
+    position: absolute;
+    top: 65px;
+    width: 130px;
+    overflow: visible;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .container-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.slider {
+  width: 75vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider .slide-track {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
+  width: calc(250px * 8);
+}
+
+.slider .slide {
+  width: 250px;
+}
+
+.slider .slide img {
+  width: 100%;
+}
+
+@keyframes scroll {
+  0% {
+    -wedkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  100% {
+    -wedkit-transform: translateX(calc(-250px * 4));
+    transform: translateX(calc(-250px * 4));
+  }
+}
+
+.formulario {
+  width: 320px;
+  max-width: 95%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.formulario__titulo {
+  text-align: center;
+  margin-top: -1;
+  color: #436d23;
+  font-size: 1.5em;
+  font-family: lato;
+  text-shadow: 0px 0.8px 7px;
+}
+.formulario__input,
+.formulario__label,
+.formulario__submit {
+  display: block;
+  width: 95%;
+  font-size: 0.95em;
+  font-family: Alkalami;
+}
+.formulario__input {
+  padding: 7px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+}
+.formulario__input:focus {
+  outline: 1px solid rgba(0, 0, 0, 0.7);
+}
+.formulario__input:focus + .formulario__label {
+  margin-top: -115px;
+}
+.formulario__label {
+  padding-left: 15px;
+  position: absolute;
+  margin-top: -85px;
+  z-index: -20;
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+}
+.formulario__submit {
+  background: #436d23;
+  color: white;
+  padding: 10px 20px;
+  width: 324px;
+  cursor: pointer;
+  border: none;
+  font-family: lato;
+  font-size: 1.2em;
+  color: #9dc082;
+}
+.fijar {
+  margin-top: -135px;
+}
+
+.iframe {
+  padding-top: 5%;
+  padding-left: 0%;
+  padding-bottom: 0%;
+}
+.contacto {
+  padding-left: 1.25em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.footer {
+  background-color: #51604d;
+  padding: 1.5em;
+  margin-left: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.5em;
+  color: #feebeb;
+}

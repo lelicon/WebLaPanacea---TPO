@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>La Panacea</title>
+    <link rel="icon" type="image/png" href="img/Logo .png" sizes="32x32" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <script
+      src="https://kit.fontawesome.com/7acc2c405f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div id="contenedor-de-marca">
+        <img src="img/LogoPanacea.png" width="180" height="180" alt="" />
+      </div>
+    </header>
+
+    <span class="nav-bar" id="btnMenu"
+      ><i class="fa-solid fa-bars"></i> Menú</span
+    >
+    <nav class="main-nav">
+      <ul class="menu" id="menu">
+        <li class="menu__item">
+          <a href="Inicio.html" class="menu__link"><b>Inicio</b></a>
+        </li>
+        <li class="menu__item">
+          <a href="Nosotros.html" class="menu__link"><b>Nosotros</b></a>
+        </li>
+        <li class="menu__item container-submenu">
+          <a href="Productos.html" class="menu__link submenu-btn"
+            ><b>Productos </b><i class="fa-solid fa-caret-down"></i
+          ></a>
+          <ul class="submenu">
+            <li class="menu__item">
+              <a href="Encurtidos.html" class="menu__link"><b>Encurtidos</b></a>
+            </li>
+            <li class="menu__item">
+              <a href="Salsas.html" class="menu__link"><b>Salsas</b></a>
+            </li>
+            <li class="menu__item">
+              <a href="Mermeladas.html" class="menu__link"><b>Mermeladas</b></a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a href="Contacto.Html" class="menu__link"><b>Contacto</b></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="flex-container">
+      <form action="" class="formulario" id="formulario">
+        <h1 class="formulario__titulo"><b>Contacto</b></h1>
+
+        <input type="text" class="formulario__input" id="nombre" />
+        <label for="nombre" class="formulario__label">*Nombre</label>
+
+        <input type="text" class="formulario__input" id="apellido" />
+        <label for="apellido" class="formulario__label">*Apellido</label>
+
+        <input type="text" class="formulario__input" id="telefono" />
+        <label for="telefono" class="formulario__label"
+          >*Teléfono de Contacto</label
+        >
+
+        <input type="text" class="formulario__input" id="email" />
+        <label for="email" class="formulario__label">*E-mail</label>
+
+        <input type="text" class="formulario__input" id="mensaje" />
+        <label for="mensaje" class="formulario__label">Mensaje</label>
+
+        <input
+          type="submit"
+          class="formulario__submit"
+          onclick=" return enviarFormulario();"
+          value="Enviar"
+        />
+      </form>
+      <div id="error"></div>
+
+      <div class="contacto">
+        <br />
+        <i class="fa-solid fa-location-dot">
+          Plaza Barrio Smithfield, Zarate, Provincia de Buenos Aires
+        </i>
+        <br />
+        <i class="fa-solid fa-envelope"> contacto@lapanacea.com.ar</i><br />
+
+        <i class="fa-solid fa-phone"> 011-4381000</i>
+        <br />
+        <br />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.359377315328!2d-59.012521084961804!3d-34.111548280589915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb0d3702f447a3%3A0x5d9fb58180eef8b4!2sPlaza%20barrio%20Smithfield!5e0!3m2!1ses!2sar!4v1666286183602!5m2!1ses!2sar"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <div class="footer">
+      <b>LA PANACEA&trade; Zárate, Buenos Aires, Argentina</b>
+    </div>
+  </footer>
+
+  <script src="jsfile.js"></script>
+</html>
